@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spooky Timer</title>
+  <link rel="stylesheet" href="normalize.css">
+  <script src="main.js"></script>
+  <style>
+    :root {
+      --background-color: #290025;
+      --box-color: #35012c;
+      --font-color: #bb049b;
+
+      --background-hl: #066839;
+      --font-hl: #0f5132;
+    }
+    body {
+      background-color: var(--background-color);
+      overflow: hidden;
+      font-family: monospace;
+    }
+    .center-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    .inner-container {
+      flex-direction: column;
+      display: flex; 
+      gap: 2px;
+    }
+    .sectors {
+      display: flex;
+      width: 1200px;
+      height: 256px;
+
+      justify-content: space-between;
+      gap: 2px;
+
+      color: var(--font-hl);
+    }
+    .sector {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: var(--font-color);
+      user-select: none;
+      background-color: var(--box-color);
+    }
+
+    .highlighted {
+      background-color: var(--background-hl);
+      color: var(--font-hl);
+    }
+    .delay {
+      display: block;
+      font-size: 2.5em;
+      flex-grow: 1;
+      color: var(--font-color);
+      user-select: none;
+      background-color: var(--box-color);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <div class="inner-container">
+      <div class="delay"></div>
+      <div class="sectors"></div>
+    </div>
+  </div>
+</body>
+</html>
